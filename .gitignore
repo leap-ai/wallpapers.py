@@ -1,0 +1,16 @@
+# Ignore venv and node_modules directories
+venv/
+myenv/
+node_modules/
+
+# Ignore .pyc and .pyo files
+*.pyc
+*.pyo
+
+# Ignore editor-specific files
+*~
+.*.swp
+*.swp
+.DS_Store
+.idea/
+.vscode/
