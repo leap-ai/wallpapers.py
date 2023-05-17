@@ -6,11 +6,11 @@ Get started by forking this repository (button top right), and downloading it to
 
 ### Run it locally
 
-1. Open the terminal
+1. Open the terminal and navigate to your project folder
 2. Run `python -m venv myenv` to create your virtual environment and `source myenv/bin/activate` to activate it
-3. Run `pip install requests dotenv` to install the necessary packages
-4. Add your credentials in .env, following the .envExample file
-5. Run `python leap_wallpapers.py` to run the script
+3. Run `pip install -r requirements.txt` to install the necessary packages
+4. Add your credentials in a .env file, following the .envExample file
+5. Run `python3 leap_wallpapers.py` to run the script
 
 ### Bonus
 

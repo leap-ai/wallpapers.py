@@ -15,9 +15,9 @@ HEADERS = {
 }
 
 batch = [
-    "sunset over the mountains, orange sky, silhouettes, serene landscape, peaceful ambiance",
+    "futuristic tree house, hyper realistic, epic composition, cinematic, landscape vista photography by Carr Clifton & Galen Rowell, Landscape veduta photo by Dustin Lefevre & tdraw, detailed landscape painting by Ivan Shishkin, rendered in Enscape, Miyazaki, Nausicaa Ghibli, 4k detailed post processing, unreal engine",
     "old European town, cobblestone streets, colorful buildings, cafe, charming atmosphere",
-    "vibrant autumn foliage, fall colors, golden leaves, scenic beauty, nature's palette",
+    "beautiful landscape sunset over the ocean, full of colors, 8k",
     "tropical rainforest, lush greenery, exotic wildlife, hidden waterfall, untouched wilderness"
 ]
 
@@ -27,14 +27,14 @@ def generate_image(model_id, prompt):
     payload = {
         "prompt": prompt,  
         "steps": 50,
-        "width": 512,
-        "height": 512,
+        "width": 800,
+        "height": 360,
         "numberOfImages": 1,
         "promptStrength": 7,
         "upscaleBy": "x1",
         "negativePrompt": "",
         "sampler": "ddim",
-        "restoreFaces": True,
+        "restoreFaces": False,
     }
 
     response = requests.post(url, json=payload, headers=HEADERS)
@@ -72,7 +72,8 @@ def get_inference_job(model_id, inference_id):
 
     return inference_id, state, images
 
-# Realistic Vision (default): eab32df0-de26-4b83-a908-a83f3015e971
+# Realistic Vision (using as default): eab32df0-de26-4b83-a908-a83f3015e971
+# Other models:
 # Stable Diffusion 1.5: 8b1b897c-d66d-45a6-b8d7-8e32421d02cf
 # Stable Diffusion 2.1: ee88d150-4259-4b77-9d0f-090abe29f650	
 model_id = "eab32df0-de26-4b83-a908-a83f3015e971"
